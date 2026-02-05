@@ -1,0 +1,25 @@
+name: Build styles ZIP
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build zip
+        run: |
+          ZIP_NAME="gidsam-styles-v1.zip"
+          rm -f "$ZIP_NAME"
+          zip -r "$ZIP_NAME" styles icons README.md
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gidsam-styles-v1
+          path: gidsam-styles-v1.zip

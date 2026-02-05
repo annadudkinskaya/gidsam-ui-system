@@ -1,0 +1,155 @@
+/* ===== Generic popup base ===== */
+.g-popup-dim{
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.45);
+  display:none;
+  z-index:980;
+}
+.g-popup-dim.show{display:block;}
+
+.g-popup{
+  position:fixed; inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:990;
+}
+.g-popup.show{display:flex;}
+
+.g-popup__wrap{
+  position:relative;
+  width:min(680px,92vw);
+  background:var(--g-white);
+  border-radius:var(--g-r-16);
+  box-shadow:var(--g-shadow-2);
+  overflow:hidden;
+}
+
+.g-popup__x{
+  position:absolute;
+  right:10px; top:10px;
+  width:36px; height:36px;
+  border:0;
+  border-radius:10px;
+  background:rgba(255,255,255,.92);
+  cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+}
+
+.g-popup__head{
+  padding:12px 52px 12px 14px;
+  border-bottom:1px solid var(--g-line);
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.g-popup__title{
+  font-size:18px;
+  font-weight:700;
+  color:var(--g-ink);
+  margin:0;
+}
+
+.g-popup__meta{
+  margin-top:4px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  color:var(--g-muted);
+  font-size:12px;
+  align-items:center;
+}
+
+.g-popup__org{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  color:var(--g-text);
+}
+.g-popup__verified{
+  width:16px; height:16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.g-popup__badge{
+  background:var(--g-blue);
+  color:#fff;
+  font-weight:700;
+  border-radius:12px;
+  padding:4px 10px;
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.g-popup__media{
+  padding:10px 14px;
+}
+.g-popup__media-inner{
+  position:relative;
+  width:100%;
+  max-height:60vh;
+  aspect-ratio:4/3;
+  border-radius:12px;
+  overflow:hidden;
+  background:#f2f4f7;
+}
+.g-popup__media-inner img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.g-popup__desc{
+  margin:4px 14px 12px;
+  color:var(--g-text);
+  font-size:14px;
+  line-height:1.45;
+}
+
+/* ===== Actions row (1 primary + 3 equal icon buttons) ===== */
+.g-actions{
+  padding:10px 14px;
+  border-top:1px solid var(--g-line);
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.g-btn-primary{
+  height:44px;
+  padding:0 16px;
+  border-radius:12px;
+  border:1.5px solid var(--g-blue);
+  background:var(--g-blue);
+  color:#fff;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+}
+.g-btn-primary:hover{background:var(--g-blue-hover); border-color:var(--g-blue-hover);}
+
+.g-btn-icon{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1.5px solid var(--g-blue);
+  background:#fff;
+  color:var(--g-blue);
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.g-btn-icon svg{width:20px; height:20px; display:block; fill:currentColor;}
+.g-btn-icon:hover{background:rgba(30,124,242,.06);}

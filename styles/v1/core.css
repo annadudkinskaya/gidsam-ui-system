@@ -1,0 +1,43 @@
+:root{
+  /* Brand */
+  --g-blue:#1E7CF2;
+  --g-blue-hover:#1666CC;
+  --g-blue-soft:rgba(30,124,242,.10);
+
+  /* Text */
+  --g-ink:#0B0F17;
+  --g-text:#111827;
+  --g-muted:#6F7B8A;
+
+  /* UI */
+  --g-line:#EEF1F4;
+  --g-bg:#F7F8FA;
+  --g-white:#FFFFFF;
+
+  /* Geometry */
+  --g-r-12:12px;
+  --g-r-16:16px;
+  --g-r-18:18px;
+
+  /* Shadows (Apple-like) */
+  --g-shadow-1:0 8px 22px rgba(0,0,0,.12);
+  --g-shadow-2:0 18px 48px rgba(0,0,0,.35);
+
+  /* Spacing */
+  --g-gap-8:8px;
+  --g-gap-12:12px;
+  --g-gap-16:16px;
+}
+
+html, body{
+  background:var(--g-bg);
+  color:var(--g-text);
+}
+
+.g-font, .g-font *{
+  font-family:"Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* helpers */
+.g-hide{display:none !important;}
+.g-ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}

@@ -1,21 +1,25 @@
-# GIDSAM UI System
+# ГИДСАМ — Styles Pack v1
 
-Единая UI / UX система проекта «ГИДСАМ».
+## Как скачать ZIP
+1) Открой вкладку **Actions**
+2) Выбери workflow **Build styles ZIP**
+3) Открой последний запуск
+4) Справа внизу **Artifacts** → скачай `gidsam-styles-v1`
 
-Цель репозитория:
-— зафиксировать визуальные и поведенческие стандарты интерфейса  
-— обеспечить единый стиль всех витрин, блоков, карточек и страниц  
-— использовать как источник истины для ИИ, разработчиков и дизайнеров  
+## Что внутри
+- `styles/v1/*.css` — базовые токены, шрифты, попапы, витрины/карточки
+- `icons/v1/*.svg` — иконки (телефон, закладка, поделиться, verified)
 
-## Ключевые принципы
-- Mobile-first
-- Маркетплейс-логика (плотный контент)
-- Apple-like тени и глубина
-- Фиксированные контейнеры изображений
-- Минимум анимаций, максимум функциональности
-- Единый стиль для всех типов контента (акции, компании, вакансии, новости)
+## Подключение в Tilda (в HEAD)
+Рекомендуем подключать по прямым ссылкам на Object Storage (быстро и единообразно).
+Пример:
 
-## Как использовать
-1. Все новые блоки и страницы собираются ТОЛЬКО по этим стандартам
-2. Любые изменения сначала фиксируются здесь
-3. Этот репозиторий — источник истины
+<link rel="preload" href="https://storage.yandexcloud.net/gidsam-data/styles/v1/fonts.css" as="style">
+<link rel="stylesheet" href="https://storage.yandexcloud.net/gidsam-data/styles/v1/fonts.css">
+<link rel="stylesheet" href="https://storage.yandexcloud.net/gidsam-data/styles/v1/core.css">
+<link rel="stylesheet" href="https://storage.yandexcloud.net/gidsam-data/styles/v1/popups.css">
+<link rel="stylesheet" href="https://storage.yandexcloud.net/gidsam-data/styles/v1/vitrines.css">
+
+## Версионирование
+- v1 = стабильная базовая тема
+- дальше делаем v2 без ломания v1
